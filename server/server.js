@@ -23,9 +23,9 @@ app.get('*', function (req, res) {
 
 //routes
 app.use("/api/v1/portfolio", require("./routes/portfolioRoute.js"));
-// app.get("/", (req, res) => {
-//     res.send("<h1>Welcome to node server</h1>")
-// });
+app.get("/", (req, res) => {
+    res.send("<h1>Welcome to node server</h1>")
+});
 
 
 // //port
