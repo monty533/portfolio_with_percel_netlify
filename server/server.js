@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // static file access build hai ye
-app.use(express.static(path.join(__dirname, './client/build')))
+// app.use(express.static(path.join(__dirname, './client/build')))
 // app.get('*', function (req, res) {
 //     res.sendFile(path.join(__dirname, './client/build/index.html'))
 // })
