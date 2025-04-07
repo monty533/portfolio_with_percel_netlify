@@ -15,15 +15,16 @@ app.use(express.json());
 
 // static file access build hai ye
 app.use(express.static(path.join(__dirname, './client/build')))
-app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, './client/build/index.html'))
-})
+// app.get('*', function (req, res) {
+//     res.sendFile(path.join(__dirname, './client/build/index.html'))
+// })
 // end 
 
 
 //routes
 app.use("/api/v1/portfolio", require("./routes/portfolioRoute.js"));
 app.get("/", (req, res) => {
+    // dont need to pass key in double quote , json method will do it
     res.json({
         activeStatus: true,
         error: false,
